@@ -65,6 +65,10 @@ const internshipsSchema = {
 
 const Internship = mongoose.model("Internship",internshipsSchema);
 
+app.get("/",function(req,res){
+  res.send("Hey backend");
+});
+
 app.get("/skills",function(req,res){
     Skill.find(function(err,foundSkills){
       if(!err){
